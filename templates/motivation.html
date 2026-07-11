@@ -31,11 +31,16 @@
 
     <div class="card">
 
-        <h3>💡 Motivation</h3>
+    <h3>💡 Motivation</h3>
 
-        <p>{{ quote }}</p>
+    <p>{{ quote }}</p>
 
-    </div>
+    <form method="POST">
+        <input type="hidden" name="quote" value="{{ quote }}">
+        <button type="submit">🎤 Listen</button>
+    </form>
+
+</div>
 
     {% endfor %}
 

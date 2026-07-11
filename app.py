@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, session
 import sqlite3
 import joblib
 import pandas as pd
-
+from voice import speak
 app = Flask(__name__)
 app.secret_key = "career_guidance_secret"
 
@@ -192,24 +192,6 @@ def planner():
         tasks=tasks
     )
 
-
-@app.route('/motivation')
-def motivation():
-
-    quotes = [
-        "Success comes from consistency.",
-        "Believe in yourself.",
-        "Study today, lead tomorrow.",
-        "Every expert was once a beginner.",
-        "Never stop learning."
-    ]
-
-    return render_template(
-        "motivation.html",
-        quotes=quotes
-    )
-
-
 @app.route('/progress')
 def progress():
 
@@ -239,15 +221,33 @@ def progress():
         total=total,
         completed=completed
     )
+@app.route('/motivation', methods=['GET', 'POST'])
+def motivation():
 
+    quotes = [
+        "Success comes from consistency.",
+        "Believe in yourself.",
+        "Study today, lead tomorrow.",
+        "Every expert was once a beginner.",
+        "Never stop learning."
+    ]
 
-@app.route('/logout')
-def logout():
-    session.clear()
-    return redirect('/')
+    if request.method == "POST":
+        quote = request.form["quote"]
+        speak(quote)
+
+    return render_template(
+        "motivation.html",
+        quotes=quotes
+    )
+    return render_template(
+        "motivation.html",
+        quotes=quotes
+    )
 
 
 if __name__ == "__main__":
     app.run(debug=True)
+                
 
 

@@ -1,13 +1,13 @@
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
 import joblib
 
 # Load dataset
 data = pd.read_csv("career_dataset.csv")
 
 # Features and Target
-X = data[["Interest", "Skill", "Subject", "Aptitude"]]
+X = data[["Interest", "Skill", "Subject", "Aptitude"]].copy()
 y = data["Career"]
 
 # Label Encoders
@@ -21,9 +21,9 @@ for column in X.columns:
 career_encoder = LabelEncoder()
 y = career_encoder.fit_transform(y)
 
-# Train Model
-model = DecisionTreeClassifier(
-    criterion="entropy",
+# Train Random Forest Model
+model = RandomForestClassifier(
+    n_estimators=100,
     random_state=42
 )
 
@@ -35,7 +35,7 @@ joblib.dump(encoders, "encoders.pkl")
 joblib.dump(career_encoder, "career_encoder.pkl")
 
 print("===================================")
-print("Model Trained Successfully")
+print("Random Forest Model Trained Successfully")
 print("Files Created:")
 print("1. career_model.pkl")
 print("2. encoders.pkl")
