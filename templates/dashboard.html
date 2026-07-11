@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+
+    <h1>Student Dashboard</h1>
+
+    <nav>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/career">Career Guidance</a>
+        <a href="/planner">Study Planner</a>
+        <a href="/progress">Progress</a>
+        <a href="/motivation">Motivation</a>
+        <a href="/logout">Logout</a>
+    </nav>
+
+</header>
+
+<div class="container">
+
+    <h2>Welcome, {{ name }}!</h2>
+
+    <p>
+        This dashboard helps you choose the right career,
+        plan your studies, monitor your progress,
+        and stay motivated.
+    </p>
+
+    <div class="features">
+
+        <div class="card">
+            <h3>🎯 Career Guidance</h3>
+            <p>Find the best career using Machine Learning.</p>
+            <a href="/career">
+                <button>Open</button>
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>📚 Study Planner</h3>
+            <p>Create and manage your study tasks.</p>
+            <a href="/planner">
+                <button>Open</button>
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>📈 Progress Tracker</h3>
+            <p>View your study progress.</p>
+            <a href="/progress">
+                <button>Open</button>
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>💡 Daily Motivation</h3>
+            <p>Read motivational quotes every day.</p>
+            <a href="/motivation">
+                <button>Open</button>
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 AI-Based Student Career Guidance and Study Motivation System</p>
+</footer>
+
+</body>
+</html>

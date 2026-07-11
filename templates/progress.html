@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Tracker</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+
+    <h1>Study Progress Tracker</h1>
+
+    <nav>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/career">Career Guidance</a>
+        <a href="/planner">Study Planner</a>
+        <a href="/motivation">Motivation</a>
+        <a href="/logout">Logout</a>
+    </nav>
+
+</header>
+
+<div class="container">
+
+    <h2>Your Study Progress</h2>
+
+    <div class="card">
+
+        <h3>Total Tasks</h3>
+        <p>{{ total }}</p>
+
+    </div>
+
+    <div class="card">
+
+        <h3>Completed Tasks</h3>
+        <p>{{ completed }}</p>
+
+    </div>
+
+    <div class="card">
+
+        <h3>Pending Tasks</h3>
+        <p>{{ total - completed }}</p>
+
+    </div>
+
+    {% if total > 0 %}
+
+    <div class="card">
+
+        <h3>Completion Percentage</h3>
+
+        <progress value="{{ completed }}" max="{{ total }}"></progress>
+
+        <p>{{ ((completed / total) * 100) | round(2) }} %</p>
+
+    </div>
+
+    {% else %}
+
+    <div class="card">
+
+        <h3>No Tasks Added Yet</h3>
+
+        <p>Please add study tasks in the Study Planner.</p>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+<footer>
+
+<p>
+© 2026 AI-Based Student Career Guidance and Study Motivation System
+</p>
+
+</footer>
+
+</body>
+</html>

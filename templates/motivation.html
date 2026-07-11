@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Motivation</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+
+    <h1>Daily Study Motivation</h1>
+
+    <nav>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/career">Career Guidance</a>
+        <a href="/planner">Study Planner</a>
+        <a href="/progress">Progress</a>
+        <a href="/logout">Logout</a>
+    </nav>
+
+</header>
+
+<div class="container">
+
+    <h2>Stay Motivated!</h2>
+
+    {% for quote in quotes %}
+
+    <div class="card">
+
+        <h3>💡 Motivation</h3>
+
+        <p>{{ quote }}</p>
+
+    </div>
+
+    {% endfor %}
+
+    <div class="card">
+
+        <h3>📚 Study Tips</h3>
+
+        <ul>
+            <li>Study for 45–60 minutes, then take a short break.</li>
+            <li>Revise your notes every day.</li>
+            <li>Practice coding or problem-solving regularly.</li>
+            <li>Set realistic daily goals.</li>
+            <li>Stay consistent and avoid procrastination.</li>
+        </ul>
+
+    </div>
+
+</div>
+
+<footer>
+
+<p>
+© 2026 AI-Based Student Career Guidance and Study Motivation System
+</p>
+
+</footer>
+
+</body>
+</html>

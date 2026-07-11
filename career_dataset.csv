@@ -1,0 +1,51 @@
+Interest,Skill,Subject,Aptitude,Career
+Coding,Python,Maths,High,AI Engineer
+Coding,Java,Computer Science,High,Software Engineer
+Coding,C++,Computer Science,Medium,Game Developer
+Coding,Python,Computer Science,High,Full Stack Developer
+Coding,Python,Maths,Medium,Data Scientist
+Coding,JavaScript,Computer Science,Medium,Web Developer
+Coding,Flutter,Computer Science,High,Mobile App Developer
+Coding,SQL,Computer Science,Medium,Database Administrator
+Data Analysis,Python,Maths,High,Data Scientist
+Data Analysis,Excel,Maths,Medium,Data Analyst
+Networking,TCP/IP,Computer Science,Medium,Network Engineer
+Networking,Cisco,Computer Science,High,Network Administrator
+Security,Ethical Hacking,Computer Science,High,Cyber Security Analyst
+Security,Kali Linux,Computer Science,High,Penetration Tester
+Design,Photoshop,Arts,Medium,Graphic Designer
+Design,Figma,Arts,High,UI/UX Designer
+Animation,Blender,Arts,Medium,3D Animator
+Animation,Maya,Arts,High,Animator
+Teaching,Communication,English,High,Teacher
+Teaching,Presentation,English,Medium,Lecturer
+Medicine,Biology,Biology,High,Doctor
+Medicine,Nursing,Biology,Medium,Nurse
+Engineering,Physics,Physics,High,Mechanical Engineer
+Engineering,CAD,Physics,High,Civil Engineer
+Electronics,Circuits,Physics,High,Electronics Engineer
+Business,Management,Commerce,Medium,Business Analyst
+Business,Leadership,Commerce,High,Project Manager
+Finance,Accounting,Commerce,High,Chartered Accountant
+Finance,Excel,Commerce,Medium,Financial Analyst
+Marketing,Communication,Commerce,Medium,Digital Marketing Specialist
+Marketing,SEO,Commerce,High,SEO Specialist
+Writing,Creativity,English,Medium,Content Writer
+Writing,Journalism,English,High,Journalist
+Law,Public Speaking,Political Science,High,Lawyer
+Law,Research,Political Science,Medium,Legal Advisor
+Agriculture,Farming,Biology,Medium,Agricultural Officer
+Agriculture,Research,Biology,High,Agricultural Scientist
+Statistics,R,Maths,High,Statistician
+Statistics,Python,Maths,High,Data Analyst
+AI,Machine Learning,Maths,High,Machine Learning Engineer
+AI,Deep Learning,Maths,High,AI Researcher
+Cloud,AWS,Computer Science,High,Cloud Engineer
+Cloud,Azure,Computer Science,Medium,Cloud Administrator
+DevOps,Docker,Computer Science,High,DevOps Engineer
+DevOps,Kubernetes,Computer Science,High,Site Reliability Engineer
+Testing,Selenium,Computer Science,Medium,QA Engineer
+Testing,Manual Testing,Computer Science,Medium,Software Tester
+IoT,Arduino,Physics,Medium,IoT Engineer
+Robotics,C++,Physics,High,Robotics Engineer
+Game Development,Unity,Computer Science,High,Game Developer

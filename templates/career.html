@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Guidance</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>AI Career Guidance</h1>
+
+    <nav>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/planner">Study Planner</a>
+        <a href="/progress">Progress</a>
+        <a href="/motivation">Motivation</a>
+        <a href="/logout">Logout</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <h2>Career Prediction</h2>
+
+    <form action="/career" method="POST">
+
+        <label>Interest</label>
+        <select name="interest" required>
+            <option value="">Select</option>
+            <option>Coding</option>
+            <option>AI</option>
+            <option>Data Analysis</option>
+            <option>Networking</option>
+            <option>Security</option>
+            <option>Business</option>
+            <option>Design</option>
+        </select>
+
+        <label>Skill</label>
+        <select name="skill" required>
+            <option value="">Select</option>
+            <option>Python</option>
+            <option>Java</option>
+            <option>C++</option>
+            <option>SQL</option>
+            <option>Machine Learning</option>
+            <option>Networking</option>
+            <option>Communication</option>
+        </select>
+
+        <label>Favorite Subject</label>
+        <select name="subject" required>
+            <option value="">Select</option>
+            <option>Maths</option>
+            <option>Computer Science</option>
+            <option>Physics</option>
+            <option>Biology</option>
+            <option>Commerce</option>
+            <option>English</option>
+            <option>Arts</option>
+        </select>
+
+        <label>Aptitude</label>
+        <select name="aptitude" required>
+            <option value="">Select</option>
+            <option>High</option>
+            <option>Medium</option>
+            <option>Low</option>
+        </select>
+
+        <button type="submit">
+            Predict Career
+        </button>
+
+    </form>
+
+    {% if prediction %}
+
+    <div class="card">
+
+        <h2>Recommended Career</h2>
+
+        <h3>{{ prediction }}</h3>
+
+        <p>
+            Based on your interests and skills,
+            this career is recommended for you.
+        </p>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>
